@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  lang="es">
+<head >
+	<meta charset="utf-8">
+	<title> Ejercicio DOM </title>
+	<style type="text/css">
+		
+		.box{
+			width: 200px;
+			height: 250px;
+			float: left;
+			margin: 20px;
+		}
+		.dashed{
+			border: 3px dashed black;
+			padding: 5px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<h1>Ejercicio  DOM</h1> 
+		
+		
+
+	<div class="box">
+		<form action="" method="POST" id="formulario" onsubmit=" return false;">
+			<p>
+				<strong>
+					<label for="nombre">Nombre</label>
+				</strong>
+			</p>
+			<input type="text" name="nombre" id="nombre">
+			<p>
+				<strong>
+					<label for="apellido">Apellidos</label>
+				</strong>
+			</p>
+			<input type="text" name="apellido" id="apellido">
+			<p>
+				<strong>
+					<label for="age">Edad</label>
+				</strong>
+			</p>
+			<input type="number" name="age" value="0" id="edad">
+			<p>
+				<input type="submit" value="Enivar" id="enviar">
+			</p>
+		</form>
+	</div>
+
+<div class="box dashed">
+		<h3>Informacion del usuario</h3>
+		<hr/>
+	</div>
+
+
+<script type="text/javascript" src="JS/ejercicio_dom.js" ></script>
+</body>
+</html>
