@@ -14,6 +14,7 @@ mongose.connect('mongodb://localhost:27017/portafolio') //pasar url de la base d
             // Creacion del Server
             app.listen(port,() => {
                 console.log("Servidor correcto /localhost:3700/ ")//si la conexion se ha realizado conectamente o no
+                console.log("-----------------------------------------------------------------");
             })
 
         })
