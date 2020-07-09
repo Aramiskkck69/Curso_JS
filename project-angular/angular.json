@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/styles.css"
             ],
             "scripts": []
           },
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "project-angular"
+    }
+  },
+  "defaultProject": "project-angular",
+  "cli": {
+    "analytics": "b9e8c133-80c7-49fe-9450-b2993fc8fe7d"
+  }
 }
