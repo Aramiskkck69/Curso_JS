@@ -1,1 +1,55 @@
-<p>create works!</p>
+<div class="container">
+    <h2> {{title}} </h2>
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)" >
+      <!-- Creamos el campo para poder enviar el nombre y guardarlo en el objeto porject -->
+      <p>
+      <label for ="name" > Nombre </label>
+      <input type="text" name="name" #name = "ngModel" [(ngModel)]="project.name" required/>
+        <span class="f_error" *ngIf="name.touched && !name.valid"> <!-- Si la categoria ha sido tocada o es invalida-->
+          El nombre es Obligatorio
+        </span>
+      </p>
+      <!-- Creamos el campo para poder enviar el nombre y guardarlo en el objeto porject -->
+      <p>
+      <label for ="description" > Descripcion </label>
+      <textarea name="description" #description = "ngModel" [(ngModel)]="project.description" required></textarea>
+        <span class="f_error" *ngIf="description.touched && !description.valid"> <!-- Si la categoria ha sido tocada o es invalida-->
+          La descripcion es Obligatoria
+        </span>
+      </p>
+      <!-- Creamos el campo para poder enviar el nombre y guardarlo en el objeto porject -->
+      <p>
+      <label for ="category" > Categoria </label>
+      <input type="text" name="category" #category = "ngModel" [(ngModel)]="project.category" required/>
+        <span class="f_error" *ngIf="category.touched && !category.valid"> <!-- Si la categoria ha sido tocada o es invalida-->
+          La Categoria es Obligatorio
+        </span>
+      </p>
+      <!-- Creamos el campo para poder enviar el nombre y guardarlo en el objeto porject -->
+      <p>
+      <label for ="year" > Año </label>
+      <input type="number" name="year" #year = "ngModel" [(ngModel)]="project.year" required/>
+        <span class="f_error" *ngIf="year.touched && (!year.valid || year <= 1960)"> <!-- Si la categoria ha sido tocada o es invalida-->
+         Indique un año valido
+        </span>
+      </p>
+      <!-- Creamos el campo para poder enviar el nombre y guardarlo en el objeto porject -->
+      <p>
+      <label for ="langs" > Lenguaje </label>
+      <input type="text" name="langs" #langs = "ngModel" [(ngModel)]="project.langs" required />
+        <span class="f_error" *ngIf="langs.touched && !langs.valid"> <!-- Si la categoria ha sido tocada o es invalida-->
+          Los lenguajes son obligatorios
+        </span>
+      </p>
+      <!-- Creamos el campo para poder enviar el nombre y guardarlo en el objeto porject -->
+      <p>
+      <label for ="image" > Imagen del Proyecto </label>
+      <input type="file" name="image"  placeholder = "Subir Imagen" required/>
+      </p>
+
+      <input type="submit" value="Enviar"/>
+
+    </form>
+
+</div>
