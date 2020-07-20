@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema; // Objeto esquema
 //*****************************************************************
 var ProjectSchema = Schema({//Objeto Molde
+    id:String,
     name: String,
     description: String,
     category: String,

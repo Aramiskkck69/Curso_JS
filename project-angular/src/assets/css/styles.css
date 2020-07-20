@@ -189,6 +189,9 @@ form button:hover{
   border: 1px rgba(14, 44, 80, 0.8);
   cursor: pointer;
 }
+form input[disabled]{
+  opacity: 0.4;
+}
 .f_error{
   display: block;
   width: 150px;
@@ -202,4 +205,22 @@ form button:hover{
 }
 .red{
   background: rgba(255, 0, 0, 0.3);
+}
+.message_success{
+  background: green;
+  color: white;
+  width: 35%;
+  padding: 10px;
+  font-size: 17px;
+  text-align: center;
+}
+.message_success a{
+  color: white;
+}
+.message_failed{
+  background: red;
+  color: white;
+  width: 35%;
+  padding: 10px;
+  font-size: 17px;
 }
