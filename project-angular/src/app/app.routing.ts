@@ -7,6 +7,7 @@ import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ErrorComponent } from './components/error/error.component';
+import { DetailComponent } from "./components/detail/detail.component";
 
 //************************ Rutas de las paginas web ****************************************
 const  appRoutes: Routes = [
@@ -15,6 +16,7 @@ const  appRoutes: Routes = [
   {path: 'proyectos', component: ProjectsComponent},
   {path: 'crear-proyecto', component: CreateComponent},
   {path: 'contacto', component: ContactComponent},
+  {path: 'proyecto/:id', component: DetailComponent},
   {path: '***', component: ErrorComponent},
 ];
 //**************************Exportar configuracion de las rutas ****************************************

@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="image">
+    <img src="{{url+'get-image/'+project.image}}" *ngIf="project.image"/>
+  </div>
+
+  <h1>{{project.name}}</h1>
+  <h3>{{project.description}} </h3>
+  <p>{{project.category}}</p>
+  <p>{{project.langs}}</p>
+  <p>
+      <a href="#" class="button-edit"> Editar &#10071;</a>
+      <a href="#" class="button-deleted"> Borrar &#10060; </a>
+  </p>
+
+
+
+</div>
+

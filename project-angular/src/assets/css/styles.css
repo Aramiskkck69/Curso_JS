@@ -82,7 +82,8 @@ header a:hover, .actived{
 }
 /* Contenedor principal */
 #content{
-  height: 900px;
+  min-height: 1000px;
+  height: auto;
   width: 75%;
   margin: 0px auto;
   box-shadow: 0px 0px 40px black;
@@ -150,6 +151,20 @@ article.about{
   padding: 50px;
   padding-top: 10px;
 }
+.container .image{
+  float: left;
+  width: 49%;
+}
+.container .image img{
+  width: 50%;
+  margin-left: 18%;
+  margin-right: auto;
+}
+.container .data{
+  float: left;
+  width: 49%;
+  margin-left: 30px;
+}
 .container h2{
   display: block;
   border-bottom: 1px solid #ccc;
@@ -172,6 +187,7 @@ form textarea {
   padding: 5px;
 }
 form input[type = "submit"],
+.button-edit,.button-deleted,
 form button{
   display: block;
   font-size: 17px;
@@ -182,7 +198,22 @@ form button{
   border: 1px rgba(14, 44, 80, 0.8);
   cursor: pointer;
 }
+.button-edit,.button-deleted{
+  width: 20%;
+  float: left;
+  float: left;
+  margin-right: 10px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 30px;
 
+}
+.button-deleted{
+  background: rgba(241, 24, 24, 0.93);
+}
+.button-edit{
+  background: rgba(53, 103, 164, 0.89);
+}
 form input[type = "submit"]:hover,
 form button:hover{
   background: rgba(53,103,164,0.8);
@@ -223,4 +254,28 @@ form input[disabled]{
   width: 35%;
   padding: 10px;
   font-size: 17px;
+}
+/* */
+.project{
+  list-style:none ;
+  display: block;
+  float: left;
+  width: 28%;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+.project .image{
+  width: 400px;
+  height: 195px;
+  overflow: hidden;
+}
+.project img{
+  width: 100%;
+  display: block;
+}
+.project a{
+  text-decoration: none;
+  color: #2b2b2b;
 }

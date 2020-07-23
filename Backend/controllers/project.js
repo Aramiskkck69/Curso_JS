@@ -2,6 +2,7 @@
 //********************** Variables ******************************
 var Project = require('../models/projects');
 var fs = require('fs');
+var path = require ('path');
 
 //******************************
 var controller = {
@@ -122,8 +123,19 @@ var controller = {
             return res.status(200).send({message: fileName});
 
         }
+    },
+    getImageFile(req,res){
+        var file = req.params.image;
+        var path_file = './uploads/'+file;
+        fs.exists(path_file, (exist) => {
+            if (exist){
+                return res.sendFile(path.resolve(path_file));
+            }else{
+                return res.status(200).send({
+                    message: "No existe la imagen..."});
+            }
+        });
     }
-
 
 
 };
