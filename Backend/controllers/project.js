@@ -108,15 +108,15 @@ var controller = {
 
                 Project.findByIdAndUpdate(projectID, {image: fileName}, {new: true}, (err, projectUpdated) => {
                     if(err) return res.status(500).send({message: " Error al subir la imagen"});
-                    if(!projectUpdated) return res.status(200).send({message: "No se ha subido nada"});
+                    if(!projectUpdated) return res.status(404).send({message: "No se ha subido nada"});
 
                     return res.status(200).send({project: projectUpdated});
                 });
             } else {
                 fs.unlink(filePath, (err) => { //
-                    return res.status(200).send(`La extension no es valida, solo puede enviar imagenes con 
-                                                           extension <strong> JPG,PNG,JPEG y GIF </strong> usted subio 
-                                                           un documento cons extension: <strong>${fileExt}</strong>`);
+                    return res.status(415).send(`La extension no es valida, solo puede enviar imagenes con 
+                                                           extension  JPG,PNG,JPEG y GIF  usted subio 
+                                                           un documento con extension: ${fileExt}`);
                 });
             }
         }else{

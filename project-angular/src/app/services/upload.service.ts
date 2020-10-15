@@ -1,4 +1,5 @@
 import { Injectable} from "@angular/core";
+
 import { Global } from "./global";
 
 @Injectable()
@@ -19,8 +20,9 @@ export class UploadService{
           if(xhr.readyState == 4){
             if (xhr.status == 200){
               resolve(JSON.parse(xhr.response));
-            }else{
+            } else{
               reject (xhr.response);
+              resolve(JSON.parse(xhr.response));
             }
           }
         }
