@@ -1,14 +1,33 @@
 <div class="container">
   <h1> Contacto </h1>
-  Tamaño del Slider
-  <input type="text" [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()" />
   <br/>
 
-  <div *ngIf="anchuraToSlider">
-    <app-slider [anchura] = "widthSlider"> </app-slider>
+  <div  #Textos >
+    <p >
+      Cualquier duda consultar conmigo
+    </p>
   </div>
 
 
 </div>
+
+
+  <!--
+
+  Tamaño del Slider
+  <input type="text" [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()"  />
+  <br/>
+  <button (click)="cargarSlider()"> Ver Slider </button>
+  <button (click)="resetSlider()"> Reiniciar Slider</button>
+
+  <div *ngIf="anchuraToSlider">
+    <app-slider [anchura] = "widthSlider"
+                [etiqueta]="caption"
+    > </app-slider>
+
+  </div>
+
+  -->
+
 
 

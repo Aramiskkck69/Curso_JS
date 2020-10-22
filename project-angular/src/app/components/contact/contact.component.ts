@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-declare var bxSlider: any;
+import { Component, OnInit, ElementRef ,ViewChild} from '@angular/core';
+
+
+
 
 @Component({
   selector: 'app-contact',
@@ -9,16 +11,26 @@ declare var bxSlider: any;
 
 export class ContactComponent implements OnInit {
   public widthSlider:number;
-  public anchuraToSlider: number;
+  public anchuraToSlider: any;
+  public caption: boolean;
+  @ViewChild('Textos') textos: ElementRef;
+
+
   constructor(
-
   ) {
-  }
+    this.caption = true;
 
+  }
   ngOnInit(): void {
+  //alert(document.querySelector('#texto').innerHTML);
+    console.log(this.textos);
   }
 
   cargarSlider(): any{
+
     this.anchuraToSlider = this.widthSlider;
+  }
+  resetSlider(): any{
+    this.anchuraToSlider = null;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, Output } from '@angular/core';
 
 
 @Component({
@@ -8,23 +8,19 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 @Input() anchura: number;
+@Input('etiqueta') captions: boolean;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
 
     let slider: any;
     slider = $('.bxslider');
-
-    $("#logo").click(function (e) {
-      e.preventDefault()
-      $("header").css("background", "yellow")
-        .css("height", "50px")
-    });
-
     slider.bxSlider({
       mode: 'fade',
-      captions: false,
+      captions: this.captions,
       slideWidth: this.anchura
     });
   }
