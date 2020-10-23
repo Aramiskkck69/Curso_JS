@@ -1,14 +1,28 @@
-<header>
+<header >
   <ul>
     <li><a [routerLink]= "['/sobre-mi']" [routerLinkActive]="['actived']" >Sobre mi </a></li>
     <li><a [routerLink]= "['/proyectos']" [routerLinkActive]="['actived']"> Proyectos </a></li>
     <li id="logo"><a href="#">JLaramis </a></li>
     <li><a [routerLink]= "['/crear-proyecto']" [routerLinkActive]="['actived']" >Nuevo Proyecto </a></li>
     <li><a [routerLink]= "['/contacto']" [routerLinkActive]="['actived']">Contacto </a></li>
+
   </ul>
+  <span id="spanSesion">
+    <a (click)="sesionActive()"> <img  id="imgSesion" src="assets/img/ususario.png" > Iniiciar sesion </a>
+  </span>
+
+  <div id="divSesion" *ngIf="sesion == true">
+    Inicio de sesion
+  </div>
+
+
+
+
+
 </header>
 
-<section id="content">
+<section id="content" (click)="sesionDesactive()">
+
   <router-outlet></router-outlet>
 </section>
 
